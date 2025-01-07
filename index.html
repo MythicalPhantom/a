@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Match</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Memory Match</h1>
+  <div class="container">
+    <div id="sidebar-1" class="sidebar p-4 bg-gray-200">
+      <div id="game-status" class="hidden"></div>
+      <div class="play-button-container">
+        <button id="play-btn" class="custom-button">Play</button>
+      </div>
+    </div>
+    <div id="game-board" class="game-board"></div>
+    <div id="sidebar-2" class="sidebar p-4 bg-gray-200">
+      <div class="customization-options">
+        <h3>Customization</h3>
+        <label for="board-size" class="block mb-2">Board Size:</label>
+        <select id="board-size" class="custom-textbox" onchange="changeBoardSize(this.value)">
+          <option value="4x4">4x4</option>
+          <option value="6x6">6x6</option>
+          <option value="8x8">8x8</option>
+          <option value="10x10">10x10</option>
+        </select>
+        <label for="card-back-img" class="block mb-2">Card Back Image URL:</label>
+        <input type="text" id="card-back-img" class="custom-textbox" placeholder="Enter URL" onchange="changeCardBackImage(this.value)">
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
